@@ -16,6 +16,7 @@ class AuthController(Controller):
     def login(self):
         username = self.request.input("username")
         password = self.request.input("password")
+        print("stuff from body", username, password)
         result = self.auth.login(username, password)
         return result
 

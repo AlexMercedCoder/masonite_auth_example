@@ -5,6 +5,7 @@ from masonite.view import View
 from masonite.controllers import Controller
 from app.Dog import Dog
 from app.Owner import Owner
+from app.User import User
 
 
 class DogOwnerController(Controller):
@@ -22,7 +23,7 @@ class DogOwnerController(Controller):
         return self.request.user().owners
         
     def get_user_dogs(self):
-        return self.request.user().dogs
+        return self.request.user().username
 
     def create_owner(self):
         user = self.request.user()
